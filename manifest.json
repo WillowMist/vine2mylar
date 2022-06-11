@@ -10,7 +10,7 @@
       "16": "icon16.png",
       "48": "icon48.png"
    },
-   "manifest_version": 3,
+   "manifest_version": 2,
    "author": "Dragon Pro Studios",
    "name": "Vine2Mylar",
    "options_ui": {
