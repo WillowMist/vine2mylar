@@ -11,43 +11,50 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
-      }
       #status {
             /* avoid an excessively wide status text */
             white-space: pre;
             text-overflow: ellipsis;
             overflow: hidden;
-            max-width: 400px;
-            width: 100px;
+            max-width: 500px;
+            width: 500px;
       }
       #arcmenu {
           white-space: pre;
           max-width: 500px;
       }
     </style>
-
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <script src="popup.js"></script>
   </head>
   <body>
-    <div id="status"></div>
-    <div id="arcmenu">
-        <form id="addissueform" method="get">
-            Select Arc
-            <select name="id" id="id">
-            </select>
-            OR Enter New Arc Name
-            <input type="text" id="storyarcname" name="storyarcname" value="">
-            <input type="hidden" name="issues" id="issues" value="">
-            <input type="hidden" name="apikey" id="apikey" value="">
-            <input id="finished" type="button" value="Finished">
-        </form>
-    </div>
+  <div class="card rounded-circle" id="card">
+      <div class="card-body">
+          <h5 class="card-title text-center" id="statustitle"></h5>
+        <div class="card-text">
+          <div id="status"></div>
+          <div id="arcmenu">
+              <form id="addissueform" method="get">
+                  Select Arc
+                  <select name="id" id="id">
+                  </select>
+                  OR Enter New Arc Name
+                  <input type="text" id="storyarcname" name="storyarcname" value="">
+                  <input type="hidden" name="issues" id="issues" value="">
+                  <input type="hidden" name="apikey" id="apikey" value="">
+                  <input id="finished" type="button" value="Finished">
+              </form>
+          </div>
+        </div>
+
+      </div>
+  </div>
   </body>
+  <script src="popup.js"></script>
 </html>
 
